@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CykelWorx Design</title>
+<!-- TailwindCSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-white">
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4">
+<div class="flex items-center space-x-2">
+<img alt="CykelWorx Design" class="h-12 w-auto" src="./images/Cykelworx Design logo rev 2.png"/>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-gray-700 hover:text-blue-900 transition-colors" href="#products">Products</a>
+<a class="text-gray-700 hover:text-blue-900 transition-colors" href="#about">About</a>
+<a class="text-gray-700 hover:text-blue-900 transition-colors" href="#contact">Contact</a>
+</nav>
+<button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 px-6 py-2 rounded-lg font-semibold transition-colors">
+          Get Started
+        </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
+<div class="absolute inset-0 bg-black opacity-10"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Innovating the 
+            <span class="text-yellow-400"> Future</span> of 
+            <span class="text-yellow-400"> Sports</span> &amp; 
+            <span class="text-yellow-400"> Outdoor</span> Gear
+          </h1>
+<p class="text-xl text-blue-100 mb-8 leading-relaxed">
+            We're a product design studio creating groundbreaking intellectual property 
+            for the sports and outdoor industry. Our mission is to solve real problems 
+            with innovative, user-centered design.
+          </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 flex items-center justify-center">
+              Discover The Assistant
+              <i class="ml-2 w-5 h-5" data-lucide="arrow-right"></i>
+</button>
+<button class="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all">
+              Learn More
+            </button>
+</div>
+</div>
+<div class="relative">
+<div class="bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+<div class="bg-white rounded-2xl p-6 flex items-center justify-center h-64"><img alt="The Assistant Logo" class="mx-auto h-24 w-auto mb-4" src="./images/Assistant logo rev 2.png"/>
+<div class="text-center">
+<i class="w-16 h-16 text-blue-900 mx-auto mb-4" data-lucide="car"></i>
+<i class="w-12 h-12 text-yellow-500 mx-auto" data-lucide="bike"></i>
+<p class="text-blue-900 font-semibold mt-4">The Assistant</p>
+<p class="text-gray-600 text-sm">Revolutionary Cycle Carrier</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Product Section -->
+<section class="py-20 bg-gray-50" id="products">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-blue-900 mb-4">Introducing The Assistant</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our flagship product revolutionises how cyclists transport their bikes. 
+          The Assistant makes lifting bicycles onto car roofs effortless and safe.
+        </p>
+</div>
+<!-- ... (Rest of sections remain same as JSX, just replace icons with <i data-lucide="">) -->
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-16" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div class="md:col-span-2">
+<div class="flex items-center space-x-2 mb-6">
+<img alt="CykelWorx Design" class="h-10 w-auto brightness-0 invert" src="./images/Cykelworx Design logo rev 2.png"/>
+</div>
+<p class="text-blue-200 mb-6 max-w-md">
+            Innovating the future of sports and outdoor equipment through 
+            thoughtful design and cutting-edge engineering.
+          </p>
+</div>
+<!-- Other footer sections... -->
+</div>
+<div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-200">
+<p>© 2024 CykelWorx. All rights reserved. Designed for innovation.</p>
+</div>
+</div>
+</footer>
+<!-- Scroll to Top Button -->
+<button aria-label="Scroll to top" class="hidden fixed bottom-8 right-8 bg-yellow-500 hover:bg-yellow-600 text-blue-900 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50" id="scrollToTopBtn">
+<i class="w-6 h-6" data-lucide="chevron-up"></i>
+</button>
+<!-- JS: Handle Scroll -->
+<script>
+    lucide.createIcons();
+
+    const btn = document.getElementById("scrollToTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        btn.classList.remove("hidden");
+      } else {
+        btn.classList.add("hidden");
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
